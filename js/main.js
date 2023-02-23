@@ -7,6 +7,18 @@
 // Scriviamo sempre prima dei commenti in italiano per capire cosa vogliamo fare
 // Proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo “a mano”
 
-// --Creo un ciclo for che parte da i=0 a i<=100 
+// --Creo un ciclo for che parte da i=1 a i<=100 
 // --all'interno inserisco delle condizioni dove se il numero è multiplo di 3 quindi i%===3 stampo "Fizz" mentre per i multipli di 5 quindi i%===5 stampo Buzz.
 // --invece per i numeri che sono multipli di entrambi invece stampiamo "FizzBuzz".
+
+for(let i=1; i<=100; i++){
+    if (i%3===0 && i%5===0){
+        console.log('FizzBuzz')
+    } else if (i%5===0){
+        console.log('Buzz');
+    } else if (i%3===0){
+        console.log('Fizz');
+    } else {
+        console.log(i);
+    }
+}
