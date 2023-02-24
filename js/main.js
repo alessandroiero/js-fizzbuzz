@@ -29,7 +29,7 @@
 // Selezioniamo il div
 const container = document.getElementById('table');
 // Inseriamogli la classe container
-container.className = 'container';
+container.classList.add('container');
 
 for (let i = 1; i <= 100; i++) {
   // creiamo un box da js
@@ -39,17 +39,17 @@ for (let i = 1; i <= 100; i++) {
 
   if (i % 3 === 0 && i % 5 === 0) {
     // Inseriamo la classe nel box
-    box.className = "FizzBuzz";
+    box.classList.add('FizzBuzz')
     // Inseriamo dentro al box le scritte
     box.innerHTML = "FizzBuzz";
   } else if (i % 5 === 0) {
-    box.className = "Buzz";
+    box.classList.add('Buzz');
     box.innerHTML = "Buzz";
   } else if (i % 3 === 0) {
-    box.className = "Fizz";
+    box.classList.add('Fizz')
     box.innerHTML = "Fizz";
   } else {
-    box.className = "normale";
+    box.classList.add('normale')
     box.innerHTML = i;
   }
 }
