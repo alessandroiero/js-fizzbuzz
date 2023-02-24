@@ -11,14 +11,45 @@
 // --all'interno inserisco delle condizioni dove se il numero è multiplo di 3 quindi i%===3 stampo "Fizz" mentre per i multipli di 5 quindi i%===5 stampo Buzz.
 // --invece per i numeri che sono multipli di entrambi invece stampiamo "FizzBuzz".
 
-for(let i=1; i<=100; i++){
-    if (i%3===0 && i%5===0){
-        console.log('FizzBuzz')
-    } else if (i%5===0){
-        console.log('Buzz');
-    } else if (i%3===0){
-        console.log('Fizz');
-    } else {
-        console.log(i);
-    }
+// for(let i=1; i<=100; i++){
+//     if (i%3===0 && i%5===0){
+//         console.log('FizzBuzz')
+//     } else if (i%5===0){
+//         console.log('Buzz');
+//     } else if (i%3===0){
+//         console.log('Fizz');
+//     } else {
+//         console.log(i);
+//     }
+// }
+
+
+// --BONUS 1 + 2
+
+// Selezioniamo il div
+const container = document.getElementById('table');
+// Inseriamogli la classe container
+container.className = 'container';
+
+for (let i = 1; i <= 100; i++) {
+  // creiamo un box da js
+  const box = document.createElement('div');
+  // Box dentro al container
+  container.append(box);
+
+  if (i % 3 === 0 && i % 5 === 0) {
+    // Inseriamo la classe nel box
+    box.className = "FizzBuzz";
+    // Inseriamo dentro al box le scritte
+    box.innerHTML = "FizzBuzz";
+  } else if (i % 5 === 0) {
+    box.className = "Buzz";
+    box.innerHTML = "Buzz";
+  } else if (i % 3 === 0) {
+    box.className = "Fizz";
+    box.innerHTML = "Fizz";
+  } else {
+    box.className = "normale";
+    box.innerHTML = i;
+  }
 }
